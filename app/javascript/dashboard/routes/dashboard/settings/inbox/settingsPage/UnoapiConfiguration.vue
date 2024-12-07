@@ -321,7 +321,7 @@ export default {
     return {
       apiKey: '',
       wavoipToken: '',
-      url: 'https://unoapi.cloud',
+      url: 'https://chatziapi.atresclick.com',
       ignoreGroupMessages: true,
       ignoreHistoryMessages: true,
       webhookSendNewMessages: true,
