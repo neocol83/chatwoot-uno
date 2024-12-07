@@ -8,24 +8,28 @@
     "LIST": {
       "404": "There are no inboxes attached to this account."
     },
-    "CREATE_FLOW": {
-      "CHANNEL": {
-        "TITLE": "Choose Channel",
-        "BODY": "Choose the provider you want to integrate with Chatwoot."
+    "CREATE_FLOW": [
+      {
+        "title": "Choose Channel",
+        "route": "settings_inbox_new",
+        "body": "Choose the provider you want to integrate with Chatwoot."
       },
-      "INBOX": {
-        "TITLE": "Create Inbox",
-        "BODY": "Authenticate your account and create an inbox."
+      {
+        "title": "Create Inbox",
+        "route": "settings_inboxes_page_channel",
+        "body": "Authenticate your account and create an inbox."
       },
-      "AGENT": {
-        "TITLE": "Add Agents",
-        "BODY": "Add agents to the created inbox."
+      {
+        "title": "Add Agents",
+        "route": "settings_inboxes_add_agents",
+        "body": "Add agents to the created inbox."
       },
-      "FINISH": {
-        "TITLE": "Voilà!",
-        "BODY": "You are all set to go!"
+      {
+        "title": "Voil�!",
+        "route": "settings_inbox_finish",
+        "body": "You are all set to go!"
       }
-    },
+    ],
     "ADD": {
       "CHANNEL_NAME": {
         "LABEL": "Inbox Name",
@@ -252,11 +256,6 @@
           "PLACEHOLDER": "Reject call.",
           "ERROR": "Reject call."
         },
-        "WAVOIP_TOKEN": {
-          "LABEL": "Wavoip Token",
-          "PLACEHOLDER": "Put the Wavoip token.",
-          "ERROR": "To make/receive whatsapp calls put the wavoip token"
-        },
         "MESSAGE_CALLS_WEBHOOK": {
           "LABEL": "Message on reject call",
           "PLACEHOLDER": "Message on reject call.",
@@ -306,10 +305,10 @@
           "LABEL": "Show profile picture",
           "PLACEHOLDER": "Select to show profile picture.",
           "ERROR": "Select to show profile picture."
-        },        
+        },
         "URL": {
           "LABEL": "Unoapi URL",
-          "PLACEHOLDER": "Please enter an Unoapi URL or use default https://unoapi.cloud",
+          "PLACEHOLDER": "Please enter an Unoapi URL",
           "ERROR": "This field is required"
         },
         "PHONE_NUMBER": {
@@ -478,6 +477,7 @@
         "DESCRIPTION": "Click on the Sign in with Microsoft button to get started. You will redirected to the email sign in page. Once you accept the requested permissions, you would be redirected back to the inbox creation step.",
         "EMAIL_PLACEHOLDER": "Enter email address",
         "SIGN_IN": "Sign in with Microsoft",
+        "HELP": "To add your Microsoft account as a channel, you need to authenticate your Microsoft account by clicking on 'Sign in with Microsoft' ",
         "ERROR_MESSAGE": "There was an error connecting to Microsoft, please try again"
       },
       "GOOGLE": {
@@ -485,6 +485,7 @@
         "DESCRIPTION": "Click on the Sign in with Google button to get started. You will redirected to the email sign in page. Once you accept the requested permissions, you would be redirected back to the inbox creation step.",
         "SIGN_IN": "Sign in with Google",
         "EMAIL_PLACEHOLDER": "Enter email address",
+        "HELP": "To add your Google account as a channel, you need to authenticate your Google account by clicking on 'Sign in with Google' ",
         "ERROR_MESSAGE": "There was an error connecting to Google, please try again"
       }
     },
@@ -522,6 +523,10 @@
         "DISABLED": "Disabled"
       },
       "ENABLE_CSAT": {
+        "ENABLED": "Enabled",
+        "DISABLED": "Disabled"
+      },
+      "CSAT_VISIBLE": {
         "ENABLED": "Enabled",
         "DISABLED": "Disabled"
       },
@@ -639,7 +644,15 @@
       "WHATSAPP_CONNECT": "Connect",
       "WHATSAPP_DISCONNECT": "Disconnect",
       "WHATSAPP_WEBHOOK_SUBHEADER": "This token is used to verify the authenticity of the webhook endpoint.",
-      "UPDATE_PRE_CHAT_FORM_SETTINGS": "Update Pre Chat Form Settings"
+      "UPDATE_PRE_CHAT_FORM_SETTINGS": "Update Pre Chat Form Settings",
+      "CSAT_VISIBLE": "CSAT Response Visibility",
+      "CSAT_VISIBLE_SUB_TEXT": "Allow Agents to see the CSAT survey responses",
+      "AGENT_PERMISSIONS": "Agent Permissions",
+      "AGENT_PERMISSIONS_SUB_TEXT": "Update agent permissions for this inbox",
+      "AGENT_ALLOW_TO_DELETE_MESSAGE": "Allow an agent to delete a message",
+      "AGENT_ALLOW_TO_DELETE_MESSAGE_SUB_TEXT": "Allow an agent to delete a message from a conversation.",
+      "EXTERNAL_TOKEN": "Token Wavoip",
+      "EXTERNAL_TOKEN_PLACEHOLDER": "Enter the token"
     },
     "HELP_CENTER": {
       "LABEL": "Help Center",
@@ -852,7 +865,7 @@
         "USER_MESSAGE": "Hi",
         "AGENT_MESSAGE": "Hello"
       },
-      "BRANDING_TEXT": "Powered by Chatwoot",
+      "BRANDING_TEXT": "Powered by ChatZi",
       "SCRIPT_SETTINGS": "\n      window.chatwootSettings = {options};"
     },
     "EMAIL_PROVIDERS": {
@@ -870,8 +883,7 @@
       "EMAIL": "Email",
       "TELEGRAM": "Telegram",
       "LINE": "Line",
-      "API": "API Channel",
-      "NOTIFICA_ME": "NotificaMe"
+      "API": "API Channel"
     }
   }
 }
