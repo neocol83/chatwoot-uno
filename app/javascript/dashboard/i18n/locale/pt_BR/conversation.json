@@ -330,9 +330,14 @@
   },
   "TRANSLATE_MODAL": {
     "TITLE": "Ver conteúdo traduzido",
-    "DESC": "Você pode ver o conteúdo traduzido em cada idioma.",
-    "ORIGINAL_CONTENT": "Conteúdo Original",
-    "TRANSLATED_CONTENT": "Conteúdo Traduzido",
-    "NO_TRANSLATIONS_AVAILABLE": "Nenhuma tradução disponível para este conteúdo"
+    "DESC": "Você pode visualizar o conteúdo traduzido em cada idioma.",
+    "ORIGINAL_CONTENT": "Conteúdo original",
+    "TRANSLATED_CONTENT": "Conteúdo traduzido",
+    "NO_TRANSLATIONS_AVAILABLE": "Nenhuma tradução está disponível para este conteúdo"
+  },
+  "TYPING": {
+    "ONE": "{user} está digitando",
+    "TWO": "{user} e {secondUser} estão digitando",
+    "MULTIPLE": "{user} e {count} outros estão digitando"
   }
 }
